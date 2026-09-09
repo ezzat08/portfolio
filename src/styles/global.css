@@ -1,0 +1,336 @@
+@import "tailwindcss";
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  background: #000;
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.section-padding {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.section-dark {
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.015),
+      rgba(255, 255, 255, 0)
+    );
+}
+
+.section-heading {
+  max-width: 760px;
+}
+
+.section-label {
+  display: inline-block;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+
+  letter-spacing: 0.2em;
+
+  color: rgb(113 113 122);
+}
+
+.section-title {
+  margin-top: 1rem;
+
+  font-size: 2.5rem;
+  line-height: 1.05;
+
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+.section-description {
+  margin-top: 1.5rem;
+
+  max-width: 650px;
+
+  font-size: 1rem;
+  line-height: 1.8;
+
+  color: rgb(161 161 170);
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.info-card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 1.5rem;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.045),
+      rgba(255, 255, 255, 0.015)
+    );
+
+  padding: 1.5rem;
+
+  transition:
+    border-color 300ms ease,
+    background 300ms ease,
+    transform 300ms ease;
+}
+
+.info-card:hover {
+  border-color: rgba(255, 255, 255, 0.14);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.06),
+      rgba(255, 255, 255, 0.02)
+    );
+
+  transform: translateY(-2px);
+}
+
+.large-card {
+  min-height: 250px;
+}
+
+.card-number {
+  margin-bottom: 2rem;
+
+  font-size: 0.7rem;
+
+  color: rgb(82 82 91);
+
+  letter-spacing: 0.15em;
+}
+
+.card-tag {
+  display: inline-block;
+
+  margin-bottom: 1rem;
+
+  font-size: 0.65rem;
+  font-weight: 600;
+
+  letter-spacing: 0.18em;
+
+  color: rgb(113 113 122);
+}
+
+.card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+
+  color: rgb(244 244 245);
+}
+
+.card-text {
+  margin-top: 0.75rem;
+
+  font-size: 0.9rem;
+  line-height: 1.7;
+
+  color: rgb(161 161 170);
+}
+
+
+/* =========================================================
+   TECH PILLS
+========================================================= */
+
+.tech-pill {
+  display: inline-flex;
+
+  align-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 9999px;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  padding: 0.4rem 0.75rem;
+
+  font-size: 0.7rem;
+
+  color: rgb(161 161 170);
+}
+
+
+/* =========================================================
+   GRADIENT TEXT
+========================================================= */
+
+.gradient-text {
+  background:
+    linear-gradient(
+      90deg,
+      #ffffff 0%,
+      #a1a1aa 45%,
+      #67e8f9 100%
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero-glow {
+  background:
+    radial-gradient(
+      circle,
+      rgba(34, 211, 238, 0.08),
+      transparent 65%
+    );
+}
+
+
+/* =========================================================
+   FLOW CARDS
+========================================================= */
+
+.flow-card {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  min-height: 90px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 1rem;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  padding: 1rem;
+}
+
+.flow-card span {
+  font-size: 0.85rem;
+
+  font-weight: 600;
+
+  color: rgb(228 228 231);
+}
+
+.flow-card small {
+  margin-top: 0.35rem;
+
+  font-size: 0.65rem;
+
+  color: rgb(82 82 91);
+}
+
+.flow-arrow {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: rgb(82 82 91);
+
+  font-size: 1.25rem;
+}
+
+
+/* =========================================================
+   USE CASE ICON
+========================================================= */
+
+.use-case-icon {
+  display: flex;
+
+  width: 2.5rem;
+  height: 2.5rem;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 3rem;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 0.75rem;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  font-size: 0.7rem;
+
+  color: rgb(161 161 170);
+}
+
+
+/* =========================================================
+   SELECTION
+========================================================= */
+
+::selection {
+  background: rgba(255, 255, 255, 0.15);
+
+  color: white;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 4rem;
+  }
+
+  .section-description {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .section-padding {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .section-title {
+    font-size: 2.25rem;
+  }
+
+  .section-description {
+    font-size: 0.95rem;
+  }
+
+  .flow-arrow {
+    display: none;
+  }
+
+  .flow-card {
+    min-height: 70px;
+  }
+}

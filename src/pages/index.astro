@@ -1,17 +1,4485 @@
----
 
+---
+import "../styles/global.css";
+
+const projectName = "IoT-Enabled Smart Home";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <meta
+      name="description"
+      content="IoT-Enabled Smart Home — a connected system built with physical devices, distributed sections and software."
+    />
+
+    <title>{projectName} — Project Portfolio</title>
+  </head>
+
+  <body>
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <nav class="navbar">
+      <div class="nav-inner">
+
+        <a href="/" class="nav-logo">
+          IoT Security
+        </a>
+
+        <div class="nav-links">
+          <a href="#system">System</a>
+          <a href="#architecture">How It Works</a>
+          <a href="#security">Security</a>
+          <a href="#beyond">Beyond Security</a>
+          <a href="#about">About</a>
+        </div>
+
+      </div>
+    </nav>
+
+
+    <main>
+
+      <!-- ===================================================
+           HERO
+      ==================================================== -->
+
+      <section class="hero">
+
+        <div class="hero-glow"></div>
+
+        <div class="hero-inner">
+
+          <div class="hero-content">
+
+            <div class="eyebrow">
+              <span class="status-dot"></span>
+              Final Year Project · UiTM
+            </div>
+
+            <h1>
+              From Sensor
+              <span>to Screen.</span>
+            </h1>
+
+            <p class="hero-description">
+              A connected IoT system that brings physical devices,
+              different areas and software together to create
+              one complete system.
+            </p>
+
+            <div class="tech-list">
+              <span>ESP32</span>
+              <span>IoT</span>
+              <span>MQTT</span>
+              <span>Node-RED</span>
+              <span>Flutter</span>
+            </div>
+
+            <a href="#system" class="primary-button">
+              Explore the project
+              <span>↓</span>
+            </a>
+
+          </div>
+
+
+          <!-- HERO CAROUSEL -->
+
+          <div class="carousel hero-carousel" data-carousel>
+
+            <div class="carousel-track">
+
+              <div class="carousel-slide active">
+
+                <div class="image-box">
+
+                  <img
+                    src="/images/hero-1.jpg"
+                    alt="IoT Smart Home hardware setup"
+                  />
+
+                </div>
+
+              </div>
+
+
+              <div class="carousel-slide">
+
+                <div class="image-box">
+
+                  <img
+                    src="/images/hero-2.jpg"
+                    alt="IoT Smart Home sensors and devices"
+                  />
+
+                </div>
+
+              </div>
+
+
+              <div class="carousel-slide">
+
+                <div class="image-box">
+
+                  <img
+                    src="/images/hero-3.jpg"
+                    alt="IoT Smart Home system"
+                  />
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="carousel-footer">
+
+              <div class="carousel-counter">
+                <span data-current>01</span>
+                <span class="muted"> / 03</span>
+              </div>
+
+              <div class="carousel-buttons">
+
+                <button data-prev aria-label="Previous image">
+                  ←
+                </button>
+
+                <button data-next aria-label="Next image">
+                  →
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================
+           INTRO
+      ==================================================== -->
+
+      <section id="system" class="section">
+
+        <div class="container">
+
+          <div class="section-header">
+
+            <div class="eyebrow-text">
+              THE IDEA
+            </div>
+
+            <h2>
+              It's not just a smart home.
+            </h2>
+
+            <p>
+              The main idea was to connect the physical world
+              with software, so information from different
+              parts of the system can be seen and understood
+              in one place.
+            </p>
+
+          </div>
+
+
+          <div class="three-cards">
+
+            <div class="feature-card large-number">
+
+              <div class="number">01</div>
+
+              <div class="card-icon">
+                ◉
+              </div>
+
+              <h3>
+                Sense
+              </h3>
+
+              <p>
+                Devices observe what is happening
+                around them.
+              </p>
+
+            </div>
+
+
+            <div class="feature-card large-number">
+
+              <div class="number">02</div>
+
+              <div class="card-icon">
+                ↔
+              </div>
+
+              <h3>
+                Connect
+              </h3>
+
+              <p>
+                Information moves between different
+                parts of the system.
+              </p>
+
+            </div>
+
+
+            <div class="feature-card large-number">
+
+              <div class="number">03</div>
+
+              <div class="card-icon">
+                ✦
+              </div>
+
+              <h3>
+                Understand
+              </h3>
+
+              <p>
+                The information can then be used
+                to understand what is happening.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================
+           HARDWARE
+      ==================================================== -->
+
+      <section class="section section-dark">
+
+        <div class="container">
+
+          <div class="section-header">
+
+            <div class="eyebrow-text">
+              THE PHYSICAL SIDE
+            </div>
+
+            <h2>
+              It starts with real hardware.
+            </h2>
+
+            <p>
+              Before information reaches a screen,
+              something in the real world has to detect it.
+            </p>
+
+          </div>
+
+
+          <div class="hardware-layout">
+
+            <!-- HARDWARE CAROUSEL -->
+
+            <div class="carousel hardware-carousel" data-carousel>
+
+              <div class="carousel-track">
+
+                <div class="carousel-slide active">
+
+                  <div class="image-box hardware-image-box">
+
+                    <img
+                      src="/images/esp32.png"
+                      alt="Main ESP32 hardware"
+                    />
+
+                  </div>
+
+                </div>
+
+
+                <div class="carousel-slide">
+
+                  <div class="image-box hardware-image-box">
+
+                    <img
+                      src="/images/combine.png"
+                      alt="PIR and vibration sensors"
+                    />
+
+                  </div>
+
+                </div>
+
+
+                <div class="carousel-slide">
+
+                  <div class="image-box hardware-image-box">
+
+                    <img
+                      src="/images/camera.png"
+                      alt="ESP32-CAM"
+                    />
+
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              <div class="carousel-footer">
+
+                <div class="carousel-counter">
+                  <span data-current>01</span>
+                  <span class="muted"> / 03</span>
+                </div>
+
+                <div class="carousel-buttons">
+
+                  <button data-prev aria-label="Previous image">
+                    ←
+                  </button>
+
+                  <button data-next aria-label="Next image">
+                    →
+                  </button>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- HARDWARE CARDS -->
+
+            <div class="hardware-list">
+
+              <div
+                class="simple-card hardware-card active"
+                data-hardware="0"
+              >
+
+                <div class="card-top">
+
+                  <span class="number">
+                    01
+                  </span>
+
+                  <span class="small-tech">
+                    ESP32
+                  </span>
+
+                </div>
+
+                <h3>
+                  Local Brain
+                </h3>
+
+                <p>
+                  Each area has a small controller
+                  that connects its devices to the system.
+                </p>
+
+              </div>
+
+
+              <div
+                class="simple-card hardware-card active-combined"
+                data-hardware="1"
+              >
+
+                <div class="card-top">
+
+                  <span class="number">
+                    02
+                  </span>
+
+                  <span class="small-tech">
+                    PIR
+                  </span>
+
+                </div>
+
+                <h3>
+                  Movement
+                </h3>
+
+                <p>
+                  Detects movement in the monitored area.
+                </p>
+
+              </div>
+
+
+              <div
+                class="simple-card hardware-card active-combined"
+                data-hardware="1"
+              >
+
+                <div class="card-top">
+
+                  <span class="number">
+                    03
+                  </span>
+
+                  <span class="small-tech">
+                    Vibration
+                  </span>
+
+                </div>
+
+                <h3>
+                  Physical Disturbance
+                </h3>
+
+                <p>
+                  Detects physical disturbance around
+                  the monitored space.
+                </p>
+
+              </div>
+
+
+              <div
+                class="simple-card hardware-card"
+                data-hardware="2"
+              >
+
+                <div class="card-top">
+
+                  <span class="number">
+                    04
+                  </span>
+
+                  <span class="small-tech">
+                    ESP32-CAM
+                  </span>
+
+                </div>
+
+                <h3>
+                  Visual Check
+                </h3>
+
+                <p>
+                  Provides a way to check what is
+                  happening visually.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================
+           DISTRIBUTED SYSTEM
+      ==================================================== -->
+
+      <section id="architecture" class="section">
+
+        <div class="container">
+
+          <div class="section-header centered">
+
+            <div class="eyebrow-text">
+              THE SYSTEM
+            </div>
+
+            <h2>
+              Multiple sections.
+              <span>One central brain.</span>
+            </h2>
+
+            <p>
+              Each area manages its own devices,
+              while the central system brings the
+              information together.
+            </p>
+
+          </div>
+
+
+          <div class="architecture-card">
+
+            <div class="architecture-title">
+
+              <span class="small-tech">
+                HOW THE PARTS WORK TOGETHER
+              </span>
+
+              <h3>
+                A distributed system built around synchronization.
+              </h3>
+
+              <p style="margin-top: 10px; color: #71717a; font-size: 13px; line-height: 1.6;">
+                The most important part is keeping every section
+                synchronized with the central system.
+              </p>
+
+            </div>
+
+
+            <div class="architecture-diagram">
+
+              <!-- SECTION 01 -->
+
+              <div class="section-node">
+
+                <div class="node-label">
+                  LIVING ROOM (SECTION 01)
+                </div>
+
+                <div class="brain">
+
+                  <div class="brain-symbol">
+                    ●
+                  </div>
+
+                  <div>
+
+                    <strong>
+                      Section Brain
+                    </strong>
+
+                    <small>
+                      Local controller
+                    </small>
+
+                  </div>
+
+                </div>
+
+
+                <div class="device-pills">
+
+                  <span>Motion</span>
+                  <span>Vibration</span>
+                  <span>Camera</span>
+
+                </div>
+
+              </div>
+
+
+              <div class="connection">
+
+                <div class="connection-line"></div>
+
+                <span>
+                  information
+                </span>
+
+              </div>
+
+
+              <!-- CENTRAL -->
+
+              <div class="central-node">
+
+                <div class="central-glow"></div>
+
+                <div class="central-content">
+
+                  <div class="node-label">
+                    CENTRAL SYSTEM
+                  </div>
+
+                  <div class="central-symbol">
+                    ✦
+                  </div>
+
+                  <strong>
+                    Central Brain
+                  </strong>
+
+                  <small>
+                    Brings everything together
+                  </small>
+
+                  <div class="central-tech">
+                    MQTT · Node-RED
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              <div class="connection reverse">
+
+                <div class="connection-line"></div>
+
+                <span>
+                  information
+                </span>
+
+              </div>
+
+
+              <!-- SECTION 02 -->
+
+              <div class="section-node">
+
+                <div class="node-label">
+                  YARD (SECTION 02)
+                </div>
+
+                <div class="brain">
+
+                  <div class="brain-symbol">
+                    ●
+                  </div>
+
+                  <div>
+
+                    <strong>
+                      Section Brain
+                    </strong>
+
+                    <small>
+                      Local controller
+                    </small>
+
+                  </div>
+
+                </div>
+
+
+                <div class="device-pills">
+
+                  <span>Motion</span>
+                  <span>Vibration</span>
+                  <span>Camera</span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="architecture-bottom">
+
+              <div>
+
+                <strong>
+                  Local devices
+                </strong>
+
+                <span>
+                  Each area handles its own physical devices.
+                </span>
+
+              </div>
+
+
+              <div>
+
+                <strong>
+                  Connected system
+                </strong>
+
+                <span>
+                  Information is brought together centrally.
+                </span>
+
+              </div>
+
+
+              <div>
+
+                <strong>
+                  One view
+                </strong>
+
+                <span>
+                  The user can understand the system from one place.
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="explanation-grid">
+
+            <div class="explanation-card">
+
+              <span class="step">
+                STEP 01
+              </span>
+
+              <h3>
+                Something happens.
+              </h3>
+
+              <p>
+                A movement or physical disturbance
+                happens in an area.
+              </p>
+
+            </div>
+
+
+            <div class="explanation-card">
+
+              <span class="step">
+                STEP 02
+              </span>
+
+              <h3>
+                The local brain notices.
+              </h3>
+
+              <p>
+                The nearby device detects the event
+                and passes the information on.
+              </p>
+
+            </div>
+
+
+            <div class="explanation-card">
+
+              <span class="step">
+                STEP 03
+              </span>
+
+              <h3>
+                The central system receives it.
+              </h3>
+
+              <p>
+                Information from different areas
+                can be handled together.
+              </p>
+
+            </div>
+
+
+            <div class="explanation-card">
+
+              <span class="step">
+                STEP 04
+              </span>
+
+              <h3>
+                The user sees it.
+              </h3>
+
+              <p>
+                Useful information can finally
+                reach the application.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================
+           DATA
+      ==================================================== -->
+
+      <section class="section section-dark">
+
+        <div class="container">
+
+          <div class="section-header">
+
+            <div class="eyebrow-text">
+              FROM DATA TO INFORMATION
+            </div>
+
+            <h2>
+              A signal becomes useful
+              when the system can understand it.
+            </h2>
+
+          </div>
+
+
+          <div class="data-flow-card">
+
+            <div class="data-step">
+
+              <div class="data-icon">
+                01
+              </div>
+
+              <strong>
+                Something happens
+              </strong>
+
+              <span>
+                In the physical world
+              </span>
+
+            </div>
+
+
+            <div class="data-arrow">
+              →
+            </div>
+
+
+            <div class="data-step">
+
+              <div class="data-icon">
+                02
+              </div>
+
+              <strong>
+                A device detects it
+              </strong>
+
+              <span>
+                Information is collected
+              </span>
+
+            </div>
+
+
+            <div class="data-arrow">
+              →
+            </div>
+
+
+            <div class="data-step">
+
+              <div class="data-icon">
+                03
+              </div>
+
+              <strong>
+                The system checks it
+              </strong>
+
+              <span>
+                Information is processed
+              </span>
+
+            </div>
+
+
+            <div class="data-arrow">
+              →
+            </div>
+
+
+            <div class="data-step">
+
+              <div class="data-icon">
+                04
+              </div>
+
+              <strong>
+                The user understands it
+              </strong>
+
+              <span>
+                Information reaches the screen
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================
+           SECURITY
+      ==================================================== -->
+
+      <section id="security" class="section">
+
+        <div class="container">
+
+          <div class="section-header">
+
+            <div class="eyebrow-text">
+              SECURITY
+            </div>
+
+            <h2>
+              Connected devices
+              need protection too.
+            </h2>
+
+            <p>
+              Because many devices are connected together,
+              the system also needs to control who can
+              communicate and what happens when something
+              unusual occurs.
+            </p>
+
+          </div>
+
+
+          <div class="security-grid">
+
+            <div class="security-card featured-security">
+
+              <div class="security-number">
+                01
+              </div>
+
+              <div class="security-icon">
+                ✓
+              </div>
+
+              <h3>
+                Trusted Devices
+              </h3>
+
+              <p>
+                Devices are checked before being allowed
+                to participate in the system.
+              </p>
+
+              <span class="small-tech">
+                Device Registry
+              </span>
+
+            </div>
+
+
+            <div class="security-card">
+
+              <div class="security-number">
+                02
+              </div>
+
+              <h3>
+                Controlled Access
+              </h3>
+
+              <p>
+                Communication is limited so devices
+                only access what they need.
+              </p>
+
+              <span class="small-tech">
+                MQTT Access Control
+              </span>
+
+            </div>
+
+
+            <div class="security-card">
+
+              <div class="security-number">
+                03
+              </div>
+
+              <h3>
+                Unusual Activity
+              </h3>
+
+              <p>
+                The system watches for unusually high
+                communication activity.
+              </p>
+
+              <span class="small-tech">
+                Activity Monitoring
+              </span>
+
+            </div>
+
+
+            <div class="security-card">
+
+              <div class="security-number">
+                04
+              </div>
+
+              <h3>
+                Controlled Pairing
+              </h3>
+
+              <p>
+                New devices can be connected through
+                a controlled pairing process.
+              </p>
+
+              <span class="small-tech">
+                QR Pairing
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================
+           DEMO
+      ==================================================== -->
+
+      <section class="section section-dark">
+
+        <div class="container">
+
+          <div class="section-header centered">
+
+            <div class="eyebrow-text">
+              DEMONSTRATION
+            </div>
+
+            <h2>
+              See it working.
+            </h2>
+
+            <p>
+              From a physical event to information
+              appearing on the user's screen.
+            </p>
+
+          </div>
+
+
+          <div class="video-card">
+
+            <div class="play-button">
+              ▶
+            </div>
+
+            <h3>
+              Project Demonstration
+            </h3>
+
+            <p>
+              Replace this area with your project video.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================
+           DASHBOARD
+      ==================================================== -->
+
+      <section class="section">
+
+        <div class="container">
+
+          <div class="dashboard-layout">
+
+            <div>
+
+              <div class="eyebrow-text">
+                THE APPLICATION
+              </div>
+
+              <h2>
+                The screen is only
+                the final piece.
+              </h2>
+
+              <p class="section-description">
+                The dashboard gives the user a simple
+                way to see what is happening across
+                the connected system.
+              </p>
+
+
+              <div class="dashboard-features">
+
+                <div class="dashboard-feature">
+
+                  <span>01</span>
+
+                  <div>
+
+                    <strong>
+                      System Status
+                    </strong>
+
+                    <p>
+                      See which areas are active.
+                    </p>
+
+                  </div>
+
+                </div>
+
+
+                <div class="dashboard-feature">
+
+                  <span>02</span>
+
+                  <div>
+
+                    <strong>
+                      Alerts
+                    </strong>
+
+                    <p>
+                      Know when something needs attention.
+                    </p>
+
+                  </div>
+
+                </div>
+
+
+                <div class="dashboard-feature">
+
+                  <span>03</span>
+
+                  <div>
+
+                    <strong>
+                      Remote Monitoring
+                    </strong>
+
+                    <p>
+                      Check the system without being
+                      physically there.
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- DASHBOARD CAROUSEL -->
+
+            <div class="carousel dashboard-carousel" data-carousel>
+
+              <div class="carousel-track">
+
+                <div class="carousel-slide active">
+
+                  <div class="image-box dashboard-image-box">
+
+                    <img
+                      src="/images/mainalert.png"
+                      alt="Flutter dashboard"
+                    />
+
+                  </div>
+
+                </div>
+
+
+                <div class="carousel-slide">
+
+                  <div class="image-box dashboard-image-box">
+
+                    <img
+                      src="/images/log.png"
+                      alt="IoT monitoring dashboard"
+                    />
+
+                  </div>
+
+                </div>
+
+
+                <div class="carousel-slide">
+
+                  <div class="image-box dashboard-image-box">
+
+                    <img
+                      src="/images/cyber.png"
+                      alt="IoT alert dashboard"
+                    />
+
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              <div class="carousel-footer">
+
+                <div class="carousel-counter">
+                  <span data-current>01</span>
+                  <span class="muted"> / 03</span>
+                </div>
+
+                <div class="carousel-buttons">
+
+                  <button data-prev aria-label="Previous image">
+                    ←
+                  </button>
+
+                  <button data-next aria-label="Next image">
+                    →
+                  </button>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================
+           BEYOND SECURITY
+      ==================================================== -->
+
+      <section id="beyond" class="section section-dark">
+
+        <div class="container">
+
+          <div class="section-header centered">
+
+            <div class="eyebrow-text">
+              BEYOND SECURITY
+            </div>
+
+            <h2>
+              Security is only
+              <span>one use case.</span>
+            </h2>
+
+            <p>
+              The bigger idea behind IoT is connecting
+              the physical world with information.
+            </p>
+
+          </div>
+
+
+          <div class="big-idea-card">
+
+            <div class="big-idea-main">
+
+              <span class="small-tech">
+                THE BIGGER IDEA
+              </span>
+
+              <h3>
+                What if the system
+                wasn't looking for intruders?
+              </h3>
+
+              <p>
+                The same approach could be used to
+                understand an environment, study patterns
+                and monitor changes over time.
+              </p>
+
+            </div>
+
+
+            <div class="big-idea-flow">
+
+              <div>
+                <span>01</span>
+                <strong>Sense</strong>
+              </div>
+
+              <div class="flow-line"></div>
+
+              <div>
+                <span>02</span>
+                <strong>Connect</strong>
+              </div>
+
+              <div class="flow-line"></div>
+
+              <div>
+                <span>03</span>
+                <strong>Analyse</strong>
+              </div>
+
+              <div class="flow-line"></div>
+
+              <div>
+                <span>04</span>
+                <strong>Understand</strong>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="application-grid">
+
+            <div class="application-card">
+
+              <div class="application-icon">
+                ◌
+              </div>
+
+              <h3>
+                Environment
+              </h3>
+
+              <p>
+                Monitor things like temperature,
+                movement or air conditions.
+              </p>
+
+              <span>
+                Possible application
+              </span>
+
+            </div>
+
+
+            <div class="application-card">
+
+              <div class="application-icon">
+                ≋
+              </div>
+
+              <h3>
+                Patterns
+              </h3>
+
+              <p>
+                Find repeated activity and changes
+                that happen over time.
+              </p>
+
+              <span>
+                Possible application
+              </span>
+
+            </div>
+
+
+            <div class="application-card">
+
+              <div class="application-icon">
+                ◫
+              </div>
+
+              <h3>
+                Operations
+              </h3>
+
+              <p>
+                Keep track of equipment,
+                spaces or processes.
+              </p>
+
+              <span>
+                Possible application
+              </span>
+
+            </div>
+
+
+            <div class="application-card">
+
+              <div class="application-icon">
+                ✦
+              </div>
+
+              <h3>
+                Smart Decisions
+              </h3>
+
+              <p>
+                Turn collected information
+                into something useful.
+              </p>
+
+              <span>
+                Possible application
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="beyond-statement">
+
+            <div class="statement-line"></div>
+
+            <p>
+              The project was built for security,
+              but the underlying IoT idea is much broader.
+            </p>
+
+            <div class="statement-line"></div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================
+           LEARNING
+      ==================================================== -->
+
+      <section class="section">
+
+        <div class="container">
+
+          <div class="section-header">
+
+            <div class="eyebrow-text">
+              WHAT I LEARNED
+            </div>
+
+            <h2>
+              Building the system taught me
+              more than just coding.
+            </h2>
+
+          </div>
+
+
+          <div class="learning-grid">
+
+            <div class="learning-card">
+
+              <span>
+                01
+              </span>
+
+              <h3>
+                Hardware & Software
+              </h3>
+
+              <p>
+                How physical devices and software
+                can work together as one system.
+              </p>
+
+            </div>
+
+
+            <div class="learning-card">
+
+              <span>
+                02
+              </span>
+
+              <h3>
+                Connected Systems
+              </h3>
+
+              <p>
+                How different parts can work
+                independently while staying connected.
+              </p>
+
+            </div>
+
+
+            <div class="learning-card">
+
+              <span>
+                03
+              </span>
+
+              <h3>
+                Security
+              </h3>
+
+              <p>
+                Why connected devices need protection
+                at different points in the system.
+              </p>
+
+            </div>
+
+
+            <div class="learning-card">
+
+              <span>
+                04
+              </span>
+
+              <h3>
+                Problem Solving
+              </h3>
+
+              <p>
+                Real hardware does not always behave
+                as expected, so testing matters.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================
+           ABOUT
+      ==================================================== -->
+
+      <section id="about" class="section final-section">
+
+        <div class="container">
+
+          <div class="final-card">
+
+            <div class="final-glow"></div>
+
+            <div class="final-content">
+
+              <div class="eyebrow-text">
+                ABOUT THE PROJECT
+              </div>
+
+              <h2>
+                Building technology
+                beyond the screen.
+              </h2>
+
+              <p>
+                This project gave me the opportunity to work
+                across hardware, software, networking and security,
+                and connect them into one working system.
+              </p>
+
+              <p>
+                I'm interested in building technology that
+                connects software with real-world problems.
+              </p>
+
+
+              <div class="final-buttons">
+
+                <a href="#" class="primary-button">
+                  View Resume
+                </a>
+
+                <a href="#" class="secondary-button">
+                  GitHub
+                </a>
+
+                <a href="#" class="secondary-button">
+                  LinkedIn
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+      <div class="container footer-inner">
+
+        <span>
+          IoT-Enabled Smart Home
+        </span>
+
+        <span>
+          Final Year Project · Universiti Teknologi MARA
+        </span>
+
+      </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         CAROUSEL JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+      const carousels =
+        document.querySelectorAll("[data-carousel]");
+
+
+      carousels.forEach((carousel) => {
+
+        const slides =
+          carousel.querySelectorAll(".carousel-slide");
+
+        const previous =
+          carousel.querySelector("[data-prev]");
+
+        const next =
+          carousel.querySelector("[data-next]");
+
+        const current =
+          carousel.querySelector("[data-current]");
+
+        let index = 0;
+
+
+        function showSlide(newIndex: number) {
+
+          index =
+            (newIndex + slides.length) % slides.length;
+
+
+          slides.forEach((slide, i) => {
+
+            slide.classList.toggle(
+              "active",
+              i === index
+            );
+
+          });
+
+
+          if (current) {
+
+            current.textContent =
+              String(index + 1).padStart(2, "0");
+
+          }
+
+
+          /*
+           * HARDWARE CARD SYNC
+           */
+
+          if (
+            carousel.classList.contains(
+              "hardware-carousel"
+            )
+          ) {
+
+            const hardwareCards =
+              document.querySelectorAll(
+                ".hardware-card"
+              );
+
+
+            hardwareCards.forEach((card) => {
+
+              const cardIndex =
+                Number(
+                  card.getAttribute(
+                    "data-hardware"
+                  )
+                );
+
+
+              card.classList.toggle(
+                "active",
+                cardIndex === index
+              );
+
+            });
+
+          }
+
+        }
+
+
+        previous?.addEventListener("click", () => {
+
+          showSlide(index - 1);
+
+        });
+
+
+        next?.addEventListener("click", () => {
+
+          showSlide(index + 1);
+
+        });
+
+
+        carousel.setAttribute(
+          "tabindex",
+          "0"
+        );
+
+
+        carousel.addEventListener("focus", () => {
+
+          carousel.classList.add(
+            "focused"
+          );
+
+        });
+
+
+        carousel.addEventListener("blur", () => {
+
+          carousel.classList.remove(
+            "focused"
+          );
+
+        });
+
+
+        if (
+          carousel.classList.contains(
+            "hardware-carousel"
+          )
+        ) {
+
+          showSlide(0);
+
+        }
+
+      });
+
+
+      /*
+       * HARDWARE CARD CLICK
+       */
+
+      const hardwareCards =
+        document.querySelectorAll(
+          ".hardware-card"
+        );
+
+
+      const hardwareCarousel =
+        document.querySelector(
+          ".hardware-carousel"
+        );
+
+
+      hardwareCards.forEach((card) => {
+
+        card.addEventListener(
+          "click",
+          () => {
+
+            const hardwareIndex =
+              Number(
+                card.getAttribute(
+                  "data-hardware"
+                )
+              );
+
+
+            if (!hardwareCarousel) return;
+
+
+            const slides =
+              hardwareCarousel.querySelectorAll(
+                ".carousel-slide"
+              );
+
+
+            const current =
+              hardwareCarousel.querySelector(
+                "[data-current]"
+              );
+
+
+            slides.forEach((slide, i) => {
+
+              slide.classList.toggle(
+                "active",
+                i === hardwareIndex
+              );
+
+            });
+
+
+            if (current) {
+
+              current.textContent =
+                String(
+                  hardwareIndex + 1
+                ).padStart(2, "0");
+
+            }
+
+
+            hardwareCards.forEach(
+              (otherCard) => {
+
+                const otherIndex =
+                  Number(
+                    otherCard.getAttribute(
+                      "data-hardware"
+                    )
+                  );
+
+
+                otherCard.classList.toggle(
+                  "active",
+                  otherIndex === hardwareIndex
+                );
+
+              }
+            );
+
+          }
+        );
+
+      });
+
+
+      /*
+       * KEYBOARD CONTROL
+       */
+
+      document.addEventListener(
+        "keydown",
+        (event) => {
+
+          const activeCarousel =
+            document.activeElement?.closest(
+              "[data-carousel]"
+            );
+
+
+          if (!activeCarousel) return;
+
+
+          const previous =
+            activeCarousel.querySelector(
+              "[data-prev]"
+            );
+
+
+          const next =
+            activeCarousel.querySelector(
+              "[data-next]"
+            );
+
+
+          if (event.key === "ArrowLeft") {
+
+            previous?.dispatchEvent(
+              new MouseEvent("click")
+            );
+
+          }
+
+
+          if (event.key === "ArrowRight") {
+
+            next?.dispatchEvent(
+              new MouseEvent("click")
+            );
+
+          }
+
+        }
+      );
+
+    </script>
+
+
+    <!-- =====================================================
+         STYLES
+    ====================================================== -->
+
+    <style>
+
+      :global(html) {
+        scroll-behavior: smooth;
+      }
+
+
+      :global(body) {
+
+        margin: 0;
+        background: #09090b;
+        color: #fafafa;
+
+        font-family:
+          Inter,
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+
+      }
+
+
+      * {
+        box-sizing: border-box;
+      }
+
+
+      /* =====================================================
+         NAVBAR
+      ====================================================== */
+
+      .navbar {
+
+        position: fixed;
+
+        top: 0;
+        left: 0;
+        right: 0;
+
+        z-index: 100;
+
+        border-bottom:
+          1px solid rgba(255,255,255,0.06);
+
+        background:
+          rgba(9,9,11,0.78);
+
+        backdrop-filter:
+          blur(18px);
+
+      }
+
+
+      .nav-inner {
+
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+
+        max-width: 1280px;
+
+        margin: auto;
+
+        padding:
+          18px 24px;
+
+      }
+
+
+      .nav-logo {
+
+        color: white;
+
+        text-decoration: none;
+
+        font-size: 14px;
+        font-weight: 600;
+
+        letter-spacing: -0.01em;
+
+      }
+
+
+      .nav-links {
+
+        display: flex;
+
+        gap: 28px;
+
+      }
+
+
+      .nav-links a {
+
+        color: #71717a;
+
+        font-size: 13px;
+
+        text-decoration: none;
+
+        transition:
+          color 0.25s ease;
+
+      }
+
+
+      .nav-links a:hover {
+        color: white;
+      }
+
+
+      /* =====================================================
+         GENERAL
+      ====================================================== */
+
+      .container {
+
+        width: min(
+          1200px,
+          calc(100% - 48px)
+        );
+
+        margin: auto;
+
+      }
+
+
+      .section {
+
+        padding:
+          140px 0;
+
+        border-top:
+          1px solid rgba(255,255,255,0.06);
+
+      }
+
+
+      .section-dark {
+        background: #0c0c0f;
+      }
+
+
+      .section-header {
+
+        max-width: 760px;
+
+        margin-bottom: 60px;
+
+      }
+
+
+      .section-header.centered {
+
+        margin-left: auto;
+        margin-right: auto;
+
+        text-align: center;
+
+      }
+
+
+      .eyebrow-text {
+
+        color: #60a5fa;
+
+        font-size: 10px;
+
+        font-weight: 600;
+
+        letter-spacing:
+          0.25em;
+
+      }
+
+
+      .section-header h2,
+      .dashboard-layout h2 {
+
+        margin:
+          16px 0 0;
+
+        font-size:
+          clamp(36px, 5vw, 60px);
+
+        line-height: 1.02;
+
+        letter-spacing:
+          -0.045em;
+
+        font-weight: 600;
+
+      }
+
+
+      .section-header h2 span,
+      .dashboard-layout h2 span {
+
+        color: #52525b;
+
+      }
+
+
+      .section-header p,
+      .section-description {
+
+        margin-top: 24px;
+
+        max-width: 680px;
+
+        color: #71717a;
+
+        font-size: 17px;
+
+        line-height: 1.75;
+
+      }
+
+
+      /* =====================================================
+         HERO
+      ====================================================== */
+
+      .hero {
+
+        position: relative;
+
+        min-height: 100vh;
+
+        display: flex;
+
+        align-items: center;
+
+        overflow: hidden;
+
+      }
+
+
+      .hero-glow {
+
+        position: absolute;
+
+        width: 650px;
+        height: 650px;
+
+        left: 55%;
+        top: 50%;
+
+        transform:
+          translate(-50%, -50%);
+
+        border-radius: 50%;
+
+        background:
+          rgba(59,130,246,0.08);
+
+        filter:
+          blur(100px);
+
+        pointer-events: none;
+
+      }
+
+
+      .hero-inner {
+
+        position: relative;
+
+        z-index: 1;
+
+        width: min(
+          1200px,
+          calc(100% - 48px)
+        );
+
+        margin: auto;
+
+        padding:
+          140px 0 90px;
+
+        display: grid;
+
+        grid-template-columns:
+          0.95fr 1.05fr;
+
+        align-items: center;
+
+        gap: 80px;
+
+      }
+
+
+      .eyebrow {
+
+        display: inline-flex;
+
+        align-items: center;
+
+        gap: 9px;
+
+        padding:
+          8px 13px;
+
+        border:
+          1px solid rgba(255,255,255,0.08);
+
+        border-radius: 999px;
+
+        background:
+          rgba(255,255,255,0.03);
+
+        color: #71717a;
+
+        font-size: 11px;
+
+      }
+
+
+      .status-dot {
+
+        width: 7px;
+        height: 7px;
+
+        border-radius: 50%;
+
+        background: #4ade80;
+
+        box-shadow:
+          0 0 12px rgba(74,222,128,0.6);
+
+      }
+
+
+      .hero h1 {
+
+        max-width: 650px;
+
+        margin:
+          28px 0 0;
+
+        font-size:
+          clamp(54px, 7vw, 88px);
+
+        line-height:
+          0.98;
+
+        letter-spacing:
+          -0.065em;
+
+        font-weight: 600;
+
+      }
+
+
+      .hero h1 span {
+
+        display: block;
+
+        color: #52525b;
+
+      }
+
+
+      .hero-description {
+
+        max-width: 560px;
+
+        margin-top: 30px;
+
+        color: #a1a1aa;
+
+        font-size: 18px;
+
+        line-height: 1.7;
+
+      }
+
+
+      .tech-list {
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 7px;
+
+        margin-top: 24px;
+
+      }
+
+
+      .tech-list span {
+
+        padding:
+          7px 11px;
+
+        border:
+          1px solid rgba(255,255,255,0.07);
+
+        border-radius: 999px;
+
+        background:
+          rgba(255,255,255,0.025);
+
+        color: #71717a;
+
+        font-size: 11px;
+
+      }
+
+
+      .primary-button {
+
+        display: inline-flex;
+
+        align-items: center;
+
+        gap: 12px;
+
+        margin-top: 32px;
+
+        padding:
+          13px 19px;
+
+        border-radius: 999px;
+
+        background: white;
+
+        color: #09090b;
+
+        font-size: 13px;
+
+        font-weight: 600;
+
+        text-decoration: none;
+
+        transition:
+          transform 0.25s ease,
+          background 0.25s ease;
+
+      }
+
+
+      .primary-button:hover {
+
+        transform:
+          translateY(-2px);
+
+        background:
+          #e4e4e7;
+
+      }
+
+
+      /* =====================================================
+         CAROUSEL
+      ====================================================== */
+
+      .carousel {
+
+        position: relative;
+
+        overflow: hidden;
+
+        border:
+          1px solid rgba(255,255,255,0.08);
+
+        border-radius: 28px;
+
+        background: #18181b;
+
+        box-shadow:
+          0 30px 80px rgba(0,0,0,0.35);
+
+      }
+
+
+      .carousel-track {
+
+        position: relative;
+
+        aspect-ratio: 1 / 1;
+
+      }
+
+
+      .carousel-slide {
+
+        position: absolute;
+
+        inset: 0;
+
+        opacity: 0;
+
+        transform:
+          scale(1.02);
+
+        transition:
+          opacity 0.45s ease,
+          transform 0.45s ease;
+
+        pointer-events: none;
+
+      }
+
+
+      .carousel-slide.active {
+
+        opacity: 1;
+
+        transform:
+          scale(1);
+
+        pointer-events: auto;
+
+      }
+
+
+      /* =====================================================
+         ACTUAL IMAGE BOX
+      ====================================================== */
+
+      .image-box {
+
+        position: absolute;
+
+        inset: 0;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        overflow: hidden;
+
+        background:
+          radial-gradient(
+            circle at center,
+            #27272a 0%,
+            #18181b 45%,
+            #09090b 100%
+          );
+
+      }
+
+
+      .image-box img {
+
+        display: block;
+
+        width: 100%;
+
+        height: 100%;
+
+        object-fit: contain;
+
+        object-position: center;
+
+        padding: 20px;
+
+      }
+
+
+      .hardware-image-box img {
+
+        padding: 30px;
+
+      }
+
+
+      .dashboard-image-box img {
+
+        padding: 20px;
+
+      }
+
+
+      .carousel-footer {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        padding:
+          15px 17px;
+
+        border-top:
+          1px solid rgba(255,255,255,0.07);
+
+        background:
+          rgba(9,9,11,0.8);
+
+      }
+
+
+      .carousel-counter {
+
+        font-size: 11px;
+
+        color: #a1a1aa;
+
+      }
+
+
+      .carousel-counter .muted {
+
+        color: #52525b;
+
+      }
+
+
+      .carousel-buttons {
+
+        display: flex;
+
+        gap: 6px;
+
+      }
+
+
+      .carousel-buttons button {
+
+        width: 34px;
+        height: 34px;
+
+        border:
+          1px solid rgba(255,255,255,0.08);
+
+        border-radius: 50%;
+
+        background:
+          rgba(255,255,255,0.04);
+
+        color: white;
+
+        cursor: pointer;
+
+        transition:
+          background 0.2s ease,
+          transform 0.2s ease;
+
+      }
+
+
+      .carousel-buttons button:hover {
+
+        background:
+          rgba(255,255,255,0.1);
+
+        transform:
+          translateY(-1px);
+
+      }
+
+
+      /* =====================================================
+         THREE CARDS
+      ====================================================== */
+
+      .three-cards {
+
+        display: grid;
+
+        grid-template-columns:
+          repeat(3, 1fr);
+
+        gap: 16px;
+
+      }
+
+
+      .feature-card {
+
+        min-height: 280px;
+
+        padding: 28px;
+
+        border:
+          1px solid rgba(255,255,255,0.07);
+
+        border-radius: 24px;
+
+        background:
+          linear-gradient(
+            145deg,
+            #18181b,
+            #101012
+          );
+
+        transition:
+          transform 0.3s ease,
+          border-color 0.3s ease;
+
+      }
+
+
+      .feature-card:hover {
+
+        transform:
+          translateY(-5px);
+
+        border-color:
+          rgba(255,255,255,0.14);
+
+      }
+
+
+      .number {
+
+        color: #52525b;
+
+        font-size: 11px;
+
+      }
+
+
+      .card-icon {
+
+        margin-top: 35px;
+
+        color: #60a5fa;
+
+        font-size: 25px;
+
+      }
+
+
+      .feature-card h3 {
+
+        margin-top: 20px;
+
+        font-size: 20px;
+
+        font-weight: 500;
+
+      }
+
+
+      .feature-card p {
+
+        margin-top: 8px;
+
+        max-width: 280px;
+
+        color: #71717a;
+
+        font-size: 14px;
+
+        line-height: 1.7;
+
+      }
+
+
+      /* =====================================================
+         HARDWARE
+      ====================================================== */
+
+      .hardware-layout {
+
+        display: grid;
+
+        grid-template-columns:
+          1.1fr 0.9fr;
+
+        gap: 20px;
+
+        align-items: stretch;
+
+      }
+
+
+      .hardware-carousel {
+
+        min-height: 500px;
+
+      }
+
+
+      .hardware-placeholder {
+
+        min-height: 500px;
+
+      }
+
+
+      .hardware-list {
+
+        display: grid;
+
+        grid-template-columns:
+          1fr 1fr;
+
+        gap: 12px;
+
+      }
+
+
+      .simple-card {
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: space-between;
+
+        min-height: 240px;
+
+        padding: 22px;
+
+        border:
+          1px solid rgba(255,255,255,0.07);
+
+        border-radius: 22px;
+
+        background: #18181b;
+
+      }
+
+
+      /* =====================================================
+         HARDWARE CARD INTERACTION
+      ====================================================== */
+
+      .hardware-card {
+
+        cursor: pointer;
+
+        transition:
+          transform 0.3s ease,
+          border-color 0.3s ease,
+          box-shadow 0.3s ease,
+          background 0.3s ease;
+
+      }
+
+
+      .hardware-card:hover {
+
+        transform:
+          translateY(-3px);
+
+        border-color:
+          rgba(255,255,255,0.14);
+
+      }
+
+
+      .hardware-card.active {
+
+        border-color:
+          rgba(74,222,128,0.65);
+
+        box-shadow:
+          0 0 25px rgba(74,222,128,0.08);
+
+        background:
+          #18181b;
+
+      }
+
+
+      .hardware-card.active .small-tech {
+
+        color:
+          #4ade80;
+
+      }
+
+
+      .hardware-card.active .number {
+
+        color:
+          #4ade80;
+
+      }
+
+
+      .card-top {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+      }
+
+
+      .small-tech {
+
+        color: #52525b;
+
+        font-size: 9px;
+
+        letter-spacing:
+          0.15em;
+
+        text-transform: uppercase;
+
+      }
+
+
+      .simple-card h3 {
+
+        margin-top: auto;
+
+        padding-top: 25px;
+
+        font-size: 18px;
+
+        font-weight: 500;
+
+      }
+
+
+      .simple-card p {
+
+        margin-top: 7px;
+
+        color: #71717a;
+
+        font-size: 13px;
+
+        line-height: 1.65;
+
+      }
+
+
+      /* =====================================================
+         ARCHITECTURE
+      ====================================================== */
+
+      .architecture-card {
+
+        padding: 35px;
+
+        border:
+          1px solid rgba(255,255,255,0.08);
+
+        border-radius: 30px;
+
+        background:
+          linear-gradient(
+            145deg,
+            #18181b,
+            #101012
+          );
+
+      }
+
+
+      .architecture-title h3 {
+
+        margin-top: 10px;
+
+        font-size: 21px;
+
+        font-weight: 500;
+
+      }
+
+
+      .architecture-diagram {
+
+        display: grid;
+
+        grid-template-columns:
+          1fr 80px 1.2fr 80px 1fr;
+
+        align-items: center;
+
+        margin-top: 45px;
+
+      }
+
+
+      .section-node {
+
+        padding: 22px;
+
+        border:
+          1px solid rgba(255,255,255,0.08);
+
+        border-radius: 20px;
+
+        background:
+          #111113;
+
+      }
+
+
+      .node-label {
+
+        color: #52525b;
+
+        font-size: 10px;
+
+        letter-spacing:
+          0.15em;
+
+      }
+
+
+      .brain {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 12px;
+
+        margin-top: 18px;
+
+      }
+
+
+      .brain-symbol {
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 40px;
+        height: 40px;
+
+        border:
+          1px solid rgba(96,165,250,0.15);
+
+        border-radius: 12px;
+
+        color: #60a5fa;
+
+        background:
+          rgba(59,130,246,0.05);
+
+      }
+
+
+      .brain strong {
+
+        display: block;
+
+        font-size: 20px;
+
+        font-weight: 500;
+
+      }
+
+
+      .brain small {
+
+        display: block;
+
+        margin-top: 4px;
+
+        color: #52525b;
+
+        font-size: 10px;
+
+      }
+
+
+      .device-pills {
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 5px;
+
+        margin-top: 18px;
+
+      }
+
+
+      .device-pills span {
+
+        padding:
+          5px 7px;
+
+        border-radius: 999px;
+
+        background:
+          rgba(255,255,255,0.04);
+
+        color: #52525b;
+
+        font-size: 9px;
+
+      }
+
+
+      .connection {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 7px;
+
+      }
+
+
+      .connection-line {
+
+        width: 100%;
+
+        height: 1px;
+
+        background:
+          linear-gradient(
+            90deg,
+            transparent,
+            #3f3f46,
+            transparent
+          );
+
+      }
+
+
+      .connection span {
+
+        color: #52525b;
+
+        font-size: 8px;
+
+        text-transform: uppercase;
+
+        letter-spacing:
+          0.1em;
+
+      }
+
+
+      .central-node {
+
+        position: relative;
+
+        padding: 35px 25px;
+
+        border:
+          1px solid rgba(96,165,250,0.18);
+
+        border-radius: 25px;
+
+        background:
+          rgba(59,130,246,0.035);
+
+        text-align: center;
+
+      }
+
+
+      .central-glow {
+
+        position: absolute;
+
+        inset: 20%;
+
+        border-radius: 50%;
+
+        background:
+          rgba(59,130,246,0.12);
+
+        filter:
+          blur(40px);
+
+        pointer-events: none;
+
+      }
+
+
+      .central-content {
+
+        position: relative;
+
+        z-index: 1;
+
+      }
+
+
+      .central-symbol {
+
+        margin-top: 16px;
+
+        color: #60a5fa;
+
+        font-size: 30px;
+
+      }
+
+
+      .central-node strong {
+
+        display: block;
+
+        margin-top: 10px;
+
+        font-size: 18px;
+
+        font-weight: 500;
+
+      }
+
+
+      .central-node small {
+
+        display: block;
+
+        margin-top: 6px;
+
+        color: #71717a;
+
+        font-size: 11px;
+
+      }
+
+
+      .central-tech {
+
+        margin-top: 20px;
+
+        color: #52525b;
+
+        font-size: 9px;
+
+      }
+
+
+      .architecture-bottom {
+
+        display: grid;
+
+        grid-template-columns:
+          repeat(3, 1fr);
+
+        gap: 10px;
+
+        margin-top: 35px;
+
+        padding-top: 25px;
+
+        border-top:
+          1px solid rgba(255,255,255,0.06);
+
+      }
+
+
+      .architecture-bottom div {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 5px;
+
+      }
+
+
+      .architecture-bottom strong {
+
+        font-size: 12px;
+
+        font-weight: 500;
+
+      }
+
+
+      .architecture-bottom span {
+
+        color: #52525b;
+
+        font-size: 11px;
+
+        line-height: 1.5;
+
+      }
+
+
+      .explanation-grid {
+
+        display: grid;
+
+        grid-template-columns:
+          repeat(4, 1fr);
+
+        gap: 12px;
+
+        margin-top: 15px;
+
+      }
+
+
+      .explanation-card {
+
+        padding: 22px;
+
+        border:
+          1px solid rgba(255,255,255,0.06);
+
+        border-radius: 20px;
+
+        background: #111113;
+
+      }
+
+
+      .step {
+
+        color: #60a5fa;
+
+        font-size: 9px;
+
+        letter-spacing:
+          0.15em;
+
+      }
+
+
+      .explanation-card h3 {
+
+        margin-top: 20px;
+
+        font-size: 15px;
+
+        font-weight: 500;
+
+      }
+
+
+      .explanation-card p {
+
+        margin-top: 8px;
+
+        color: #71717a;
+
+        font-size: 12px;
+
+        line-height: 1.6;
+
+      }
+
+
+      /* =====================================================
+         DATA
+      ====================================================== */
+
+      .data-flow-card {
+
+        display: grid;
+
+        grid-template-columns:
+          1fr 30px 1fr 30px 1fr 30px 1fr;
+
+        align-items: center;
+
+        padding: 25px;
+
+        border:
+          1px solid rgba(255,255,255,0.07);
+
+        border-radius: 25px;
+
+        background: #18181b;
+
+      }
+
+
+      .data-step {
+
+        display: flex;
+
+        flex-direction: column;
+
+        padding: 15px;
+
+      }
+
+
+      .data-icon {
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 35px;
+        height: 35px;
+
+        border-radius: 10px;
+
+        background:
+          rgba(96,165,250,0.06);
+
+        color: #60a5fa;
+
+        font-size: 10px;
+
+      }
+
+
+      .data-step strong {
+
+        margin-top: 15px;
+
+        font-size: 13px;
+
+        font-weight: 500;
+
+      }
+
+
+      .data-step span {
+
+        margin-top: 5px;
+
+        color: #52525b;
+
+        font-size: 10px;
+
+        line-height: 1.5;
+
+      }
+
+
+      .data-arrow {
+
+        color: #3f3f46;
+
+        text-align: center;
+
+      }
+
+
+      /* =====================================================
+         SECURITY
+      ====================================================== */
+
+      .security-grid {
+
+        display: grid;
+
+        grid-template-columns:
+          1fr 1fr;
+
+        gap: 14px;
+
+      }
+
+
+      .security-card {
+
+        position: relative;
+
+        min-height: 280px;
+
+        padding: 28px;
+
+        overflow: hidden;
+
+        border:
+          1px solid rgba(255,255,255,0.07);
+
+        border-radius: 24px;
+
+        background: #18181b;
+
+        transition:
+          transform 0.3s ease,
+          border-color 0.3s ease;
+
+      }
+
+
+      .security-card:hover {
+
+        transform:
+          translateY(-4px);
+
+        border-color:
+          rgba(255,255,255,0.14);
+
+      }
+
+
+      .featured-security {
+
+        background:
+          radial-gradient(
+            circle at 90% 10%,
+            rgba(59,130,246,0.12),
+            transparent 40%
+          ),
+          #18181b;
+
+      }
+
+
+      .security-number {
+
+        color: #52525b;
+
+        font-size: 11px;
+
+      }
+
+
+      .security-icon {
+
+        margin-top: 35px;
+
+        color: #60a5fa;
+
+        font-size: 25px;
+
+      }
+
+
+      .security-card h3 {
+
+        margin-top: 18px;
+
+        font-size: 20px;
+
+        font-weight: 500;
+
+      }
+
+
+      .security-card p {
+
+        max-width: 450px;
+
+        margin-top: 8px;
+
+        color: #71717a;
+
+        font-size: 13px;
+
+        line-height: 1.7;
+
+      }
+
+
+      .security-card .small-tech {
+
+        display: block;
+
+        margin-top: 20px;
+
+      }
+
+
+      /* =====================================================
+         VIDEO
+      ====================================================== */
+
+      .video-card {
+
+        position: relative;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        min-height: 520px;
+
+        overflow: hidden;
+
+        border:
+          1px solid rgba(255,255,255,0.07);
+
+        border-radius: 30px;
+
+        background:
+          radial-gradient(
+            circle at center,
+            #202024,
+            #09090b 70%
+          );
+
+        text-align: center;
+
+      }
+
+
+      .video-card::before {
+
+        content: "";
+
+        position: absolute;
+
+        inset: 0;
+
+        opacity: 0.25;
+
+        background-image:
+          linear-gradient(
+            rgba(255,255,255,0.04) 1px,
+            transparent 1px
+          ),
+          linear-gradient(
+            90deg,
+            rgba(255,255,255,0.04) 1px,
+            transparent 1px
+          );
+
+        background-size: 45px 45px;
+
+      }
+
+
+      .play-button {
+
+        position: relative;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 75px;
+        height: 75px;
+
+        border:
+          1px solid rgba(255,255,255,0.12);
+
+        border-radius: 50%;
+
+        background:
+          rgba(255,255,255,0.05);
+
+        font-size: 18px;
+
+      }
+
+
+      .video-card h3,
+      .video-card p {
+
+        position: relative;
+
+      }
+
+
+      .video-card h3 {
+
+        margin-top: 25px;
+
+        font-size: 20px;
+
+        font-weight: 500;
+
+      }
+
+
+      .video-card p {
+
+        margin-top: 7px;
+
+        color: #52525b;
+
+        font-size: 12px;
+
+      }
+
+
+      /* =====================================================
+         DASHBOARD
+      ====================================================== */
+
+      .dashboard-layout {
+
+        display: grid;
+
+        grid-template-columns:
+          0.8fr 1.2fr;
+
+        gap: 80px;
+
+        align-items: center;
+
+      }
+
+
+      .dashboard-features {
+
+        margin-top: 35px;
+
+      }
+
+
+      .dashboard-feature {
+
+        display: flex;
+
+        gap: 18px;
+
+        padding:
+          18px 0;
+
+        border-top:
+          1px solid rgba(255,255,255,0.07);
+
+      }
+
+
+      .dashboard-feature > span {
+
+        color: #52525b;
+
+        font-size: 10px;
+
+      }
+
+
+      .dashboard-feature strong {
+
+        font-size: 13px;
+
+        font-weight: 500;
+
+      }
+
+
+      .dashboard-feature p {
+
+        margin-top: 4px;
+
+        color: #52525b;
+
+        font-size: 11px;
+
+      }
+
+
+      .dashboard-carousel {
+
+        border-radius: 25px;
+
+      }
+
+
+      /* =====================================================
+         BEYOND SECURITY
+      ====================================================== */
+
+      .big-idea-card {
+
+        display: grid;
+
+        grid-template-columns:
+          1fr 1fr;
+
+        gap: 60px;
+
+        padding: 45px;
+
+        border:
+          1px solid rgba(255,255,255,0.08);
+
+        border-radius: 30px;
+
+        background:
+          radial-gradient(
+            circle at 10% 0%,
+            rgba(59,130,246,0.08),
+            transparent 40%
+          ),
+          #18181b;
+
+      }
+
+
+      .big-idea-main h3 {
+
+        max-width: 500px;
+
+        margin-top: 15px;
+
+        font-size:
+          clamp(28px, 4vw, 45px);
+
+        line-height: 1.05;
+
+        letter-spacing:
+          -0.04em;
+
+        font-weight: 600;
+
+      }
+
+
+      .big-idea-main p {
+
+        max-width: 520px;
+
+        margin-top: 20px;
+
+        color: #71717a;
+
+        font-size: 14px;
+
+        line-height: 1.75;
+
+      }
+
+
+      .big-idea-flow {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+      }
+
+
+      .big-idea-flow > div:not(.flow-line) {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 8px;
+
+        text-align: center;
+
+      }
+
+
+      .big-idea-flow span {
+
+        color: #60a5fa;
+
+        font-size: 9px;
+
+      }
+
+
+      .big-idea-flow strong {
+
+        font-size: 11px;
+
+        font-weight: 500;
+
+      }
+
+
+      .flow-line {
+
+        width: 30px;
+
+        height: 1px;
+
+        margin: 0 7px;
+
+        background:
+          #3f3f46;
+
+      }
+
+
+      .application-grid {
+
+        display: grid;
+
+        grid-template-columns:
+          repeat(4, 1fr);
+
+        gap: 12px;
+
+        margin-top: 15px;
+
+      }
+
+
+      .application-card {
+
+        min-height: 230px;
+
+        padding: 25px;
+
+        border:
+          1px solid rgba(255,255,255,0.07);
+
+        border-radius: 22px;
+
+        background: #111113;
+
+      }
+
+
+      .application-icon {
+
+        color: #60a5fa;
+
+        font-size: 23px;
+
+      }
+
+
+      .application-card h3 {
+
+        margin-top: 45px;
+
+        font-size: 16px;
+
+        font-weight: 500;
+
+      }
+
+
+      .application-card p {
+
+        margin-top: 7px;
+
+        color: #71717a;
+
+        font-size: 12px;
+
+        line-height: 1.65;
+
+      }
+
+
+      .application-card > span {
+
+        display: block;
+
+        margin-top: 18px;
+
+        color: #3f3f46;
+
+        font-size: 9px;
+
+        text-transform: uppercase;
+
+        letter-spacing:
+          0.1em;
+
+      }
+
+
+      .beyond-statement {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 25px;
+
+        margin-top: 80px;
+
+      }
+
+
+      .statement-line {
+
+        flex: 1;
+
+        height: 1px;
+
+        background:
+          rgba(255,255,255,0.06);
+
+      }
+
+
+      .beyond-statement p {
+
+        max-width: 480px;
+
+        margin: 0;
+
+        color: #71717a;
+
+        font-size: 13px;
+
+        line-height: 1.6;
+
+        text-align: center;
+
+      }
+
+
+      /* =====================================================
+         LEARNING
+      ====================================================== */
+
+      .learning-grid {
+
+        display: grid;
+
+        grid-template-columns:
+          repeat(4, 1fr);
+
+        gap: 12px;
+
+      }
+
+
+      .learning-card {
+
+        min-height: 250px;
+
+        padding: 25px;
+
+        border:
+          1px solid rgba(255,255,255,0.07);
+
+        border-radius: 22px;
+
+        background: #18181b;
+
+      }
+
+
+      .learning-card > span {
+
+        color: #52525b;
+
+        font-size: 10px;
+
+      }
+
+
+      .learning-card h3 {
+
+        margin-top: 55px;
+
+        font-size: 17px;
+
+        font-weight: 500;
+
+      }
+
+
+      .learning-card p {
+
+        margin-top: 8px;
+
+        color: #71717a;
+
+        font-size: 12px;
+
+        line-height: 1.65;
+
+      }
+
+
+      /* =====================================================
+         FINAL
+      ====================================================== */
+
+      .final-section {
+
+        padding-bottom: 100px;
+
+      }
+
+
+      .final-card {
+
+        position: relative;
+
+        overflow: hidden;
+
+        padding: 90px 40px;
+
+        border:
+          1px solid rgba(255,255,255,0.08);
+
+        border-radius: 35px;
+
+        background:
+          radial-gradient(
+            circle at 50% 0%,
+            rgba(59,130,246,0.1),
+            transparent 45%
+          ),
+          #18181b;
+
+        text-align: center;
+
+      }
+
+
+      .final-glow {
+
+        position: absolute;
+
+        width: 300px;
+        height: 300px;
+
+        left: 50%;
+        top: 30%;
+
+        transform:
+          translate(-50%, -50%);
+
+        border-radius: 50%;
+
+        background:
+          rgba(59,130,246,0.08);
+
+        filter:
+          blur(80px);
+
+      }
+
+
+      .final-content {
+
+        position: relative;
+
+        z-index: 1;
+
+      }
+
+
+      .final-content h2 {
+
+        max-width: 700px;
+
+        margin:
+          16px auto 0;
+
+        font-size:
+          clamp(40px, 6vw, 68px);
+
+        line-height: 1;
+
+        letter-spacing:
+          -0.05em;
+
+      }
+
+
+      .final-content p {
+
+        max-width: 650px;
+
+        margin:
+          25px auto 0;
+
+        color: #71717a;
+
+        font-size: 15px;
+
+        line-height: 1.75;
+
+      }
+
+
+      .final-buttons {
+
+        display: flex;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 8px;
+
+        margin-top: 32px;
+
+      }
+
+
+      .final-buttons .primary-button {
+        margin-top: 0;
+      }
+
+
+      .secondary-button {
+
+        display: inline-flex;
+
+        align-items: center;
+
+        padding:
+          13px 19px;
+
+        border:
+          1px solid rgba(255,255,255,0.08);
+
+        border-radius: 999px;
+
+        color: #d4d4d8;
+
+        font-size: 13px;
+
+        text-decoration: none;
+
+        background:
+          rgba(255,255,255,0.03);
+
+        transition:
+          background 0.2s ease;
+
+      }
+
+
+      .secondary-button:hover {
+
+        background:
+          rgba(255,255,255,0.08);
+
+      }
+
+
+      /* =====================================================
+         FOOTER
+      ====================================================== */
+
+      footer {
+
+        border-top:
+          1px solid rgba(255,255,255,0.06);
+
+        padding:
+          30px 0;
+
+      }
+
+
+      .footer-inner {
+
+        display: flex;
+
+        justify-content: space-between;
+
+        gap: 20px;
+
+        color: #3f3f46;
+
+        font-size: 10px;
+
+      }
+
+
+      /* =====================================================
+         RESPONSIVE
+      ====================================================== */
+
+      @media (max-width: 1000px) {
+
+        .hero-inner {
+
+          grid-template-columns:
+            1fr;
+
+          gap: 55px;
+
+        }
+
+
+        .hero-content {
+          max-width: 700px;
+        }
+
+
+        .hardware-layout {
+
+          grid-template-columns:
+            1fr;
+
+        }
+
+
+        .architecture-diagram {
+
+          grid-template-columns:
+            1fr;
+
+          gap: 15px;
+
+        }
+
+
+        .connection {
+
+          transform:
+            rotate(90deg);
+
+        }
+
+
+        .connection.reverse {
+
+          transform:
+            rotate(90deg);
+
+        }
+
+
+        .explanation-grid {
+
+          grid-template-columns:
+            1fr 1fr;
+
+        }
+
+
+        .dashboard-layout {
+
+          grid-template-columns:
+            1fr;
+
+        }
+
+
+        .big-idea-card {
+
+          grid-template-columns:
+            1fr;
+
+        }
+
+
+        .application-grid {
+
+          grid-template-columns:
+            1fr 1fr;
+
+        }
+
+
+        .learning-grid {
+
+          grid-template-columns:
+            1fr 1fr;
+
+        }
+
+      }
+
+
+      @media (max-width: 700px) {
+
+        .nav-links {
+          display: none;
+        }
+
+
+        .container,
+        .hero-inner {
+
+          width:
+            min(
+              100% - 30px,
+              1200px
+            );
+
+        }
+
+
+        .section {
+
+          padding:
+            90px 0;
+
+        }
+
+
+        .hero-inner {
+
+          padding-top:
+            120px;
+
+        }
+
+
+        .hero h1 {
+
+          font-size:
+            clamp(50px, 15vw, 72px);
+
+        }
+
+
+        .three-cards {
+
+          grid-template-columns:
+            1fr;
+
+        }
+
+
+        .hardware-list {
+
+          grid-template-columns:
+            1fr;
+
+        }
+
+
+        .hardware-carousel {
+
+          min-height: 400px;
+
+        }
+
+
+        .hardware-image-box {
+
+          min-height: 400px;
+
+        }
+
+
+        .hardware-image-box img {
+
+          padding: 20px;
+
+        }
+
+
+        .architecture-card {
+
+          padding: 20px;
+
+        }
+
+
+        .architecture-bottom {
+
+          grid-template-columns:
+            1fr;
+
+        }
+
+
+        .explanation-grid {
+
+          grid-template-columns:
+            1fr;
+
+        }
+
+
+        .data-flow-card {
+
+          grid-template-columns:
+            1fr;
+
+          gap: 10px;
+
+        }
+
+
+        .data-arrow {
+
+          transform:
+            rotate(90deg);
+
+        }
+
+
+        .security-grid {
+
+          grid-template-columns:
+            1fr;
+
+        }
+
+
+        .video-card {
+
+          min-height: 350px;
+
+        }
+
+
+        .big-idea-card {
+
+          padding: 28px;
+
+        }
+
+
+        .big-idea-flow {
+
+          flex-wrap: wrap;
+
+          gap: 12px;
+
+        }
+
+
+        .flow-line {
+
+          width: 15px;
+
+        }
+
+
+        .application-grid {
+
+          grid-template-columns:
+            1fr;
+
+        }
+
+
+        .learning-grid {
+
+          grid-template-columns:
+            1fr;
+
+        }
+
+
+        .beyond-statement {
+
+          margin-top: 50px;
+
+        }
+
+
+        .statement-line {
+
+          display: none;
+
+        }
+
+
+        .footer-inner {
+
+          flex-direction:
+            column;
+
+        }
+
+      }
+
+    </style>
+
+  </body>
 </html>
